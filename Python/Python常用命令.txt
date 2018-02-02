@@ -1,0 +1,12 @@
+升级python pip的版本命令
+> Python2 -m pip install -U pip
+> Python3 -m pip install -U pip
+
+查看安装的package
+>python3 -m  pip list 或者 pip3 list
+>python2 -m  pip list 或者 pip2 list
+如果存在异常可以创建文件%appdata%/pip/pip.ini，内容为
+[list]
+format=columns
+
+
