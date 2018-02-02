@@ -9,4 +9,5 @@
 [list]
 format=columns
 
-
+Éý¼¶pip
+python3 -m pip install --upgrade pip
