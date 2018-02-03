@@ -1,0 +1,7 @@
+在py3_py3env虚拟环境安装最新Django
+pip install Django
+
+检查Django安装是否成功 版本信息为2.0.2
+django-admin --version
+python -m django --version
+

@@ -23,3 +23,11 @@ pip3 install virtualenvwrapper-win
 进入 workon EnvNames
 退出 deactivate
 删除 rmvirtualenv EnvName
+
+由于本地安装两个版本的Python环境，可通过指定python版本创建对应的虚拟环境
+mkvirtualenv -p C:\Python27\python2.exe py2_py2env
+mkvirtualenv -p C:\Python36\python3.exe py3_py3env
+
+在py3_py3env虚拟环境安装最新Django
+pip install Django
+
