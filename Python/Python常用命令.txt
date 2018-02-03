@@ -30,5 +30,5 @@ mkvirtualenv -p C:\Python36\python3.exe py3_py3env
 
 在py3_py3env虚拟环境安装最新Django
 pip install Django
-=========================================
+====================
 
