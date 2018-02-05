@@ -5,3 +5,32 @@ pip install Django
 django-admin --version
 python -m django --version
 
+tutorial
+***进入到工程路径和python的虚拟环境
+>创建site 
+django-admin startproject votesite
+>创建app
+python manage.py startapp polls
+
+
+最外面的votesite可随意命名
+
+启动 python manage.py runserver
+指定端口 python manage.py runserver 8080
+
+Database配置
+在site/setting.py总，默认情况配置为sqlite3, 数据直接存在file中
+其他DB需要修改配置
+
+Installed_Apps
+
+
+Django Admin
+> 创建admin user
+python manage.py createsuperuser
+> 用户名 admin
+> 邮箱 admin@example.com
+> PW laixiaolin
+默认情况 Django Admin站点启动server后/admin即可访问
+
+> 注册Models，即可在admin站点编辑
