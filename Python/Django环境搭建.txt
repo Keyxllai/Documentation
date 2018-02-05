@@ -22,8 +22,28 @@ Database配置
 在site/setting.py总，默认情况配置为sqlite3, 数据直接存在file中
 其他DB需要修改配置
 
-Installed_Apps
+Installed_Apps包含App信息
 
+> 创建APP需要的table
+python manage.py migrate
+
+> 创建Models
+所有model均继承Django的models.Model类，指定其类型
+Django能够基于Model创建对应的table和Data Access API去访问对应的Model
+> Installed_apps中添加 polls APP [polls的apps.py]
+
+为models改动创建migrations 
+> python manage.py makemigrations polls
+会生成model改变的文件，对应在migrations文件中
+
+> python manage.py sqlmigrate polls 0001
+> python manage.py check
+
+将migrations改变同步到DB
+> python manage.py migrate
+
+启动python shell
+python manage.py shell
 
 Django Admin
 > 创建admin user
