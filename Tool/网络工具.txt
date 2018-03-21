@@ -1,0 +1,13 @@
+> 如何check网站解决方案是否使用了NetScaler设备
+https://www.netcraft.com/
+输入ebay.com
+
+> NetScaler
+
+> Gateway，基于nginx
+-开启Authorize权限验证
+-监控请求
+-路由策略，随机路由[round-robin]/[least-connected]/[ip-hash]
+-限流，基于IP或者总量/hour
+-记录request log
+-心跳检测

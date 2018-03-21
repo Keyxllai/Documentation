@@ -11,12 +11,15 @@ format=columns
 
 升级pip
 python3 -m pip install --upgrade pip
+修改了Python.exe后需要强制重新安装pip后， 可以直接使用pip2 pip3命令， 否则会异常
+python2 -m pip install --upgrade pip --force-reinstall
+python3 -m pip install --upgrade pip --force-reinstall
 
 安装虚拟环境
 pip3 install virtualenv
 pip3 install virtualenvwrapper-win
 
-设置虚拟环境存放路径， Windows环境新增WORK_ON的Path为E:\2018\Python\VirtualEnv即可
+设置虚拟环境存放路径， Windows环境新增WORKON_HOME的Path为E:\2018\Python\VirtualEnv即可
 
 创建 mkvirtualenv EnvName
 列表 workon
