@@ -1,0 +1,15 @@
+Net Framework, HttpWebReqeust and WebClient exist default max connection limitation, 
+personal windows OS is 2 and window server OS is 10, because Http 1.0/1.1 have this rule of maxconnection for concurrency connection;
+but current broswer not follow this rule.
+Two way change
+1. application set
+System.Net.ServicePointManager.DefaultConnectionLimit = 512;
+2. app.config set
+<configuration>
+<system.net>
+<connectionManagement>
+<add address = "http://www.google.com" maxconnection = "512" />
+<add address = "*" maxconnection = "512" />
+</connectionManagement>
+</system.net>
+</configuration>

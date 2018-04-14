@@ -1,0 +1,9 @@
+drop table tablename
+- execute this,No more table,no more data
+- if you don't need that table any more
+truncate table tablename
+- execute this, empty table and auto incrementing keys are reset to 1, 
+- if you just wanna empty table. It's faster than DELETE. 
+   DELETE will scan the table to genrate count of rows that were affected
+delete from table <where>
+- delete specific records
