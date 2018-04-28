@@ -1,0 +1,18 @@
+
+1. 1xx 消息,Request已被接受，需要继续处理。属于临时响应。不属于HTTP协议标准，服务器禁止返回1xx响应给客户端
+2. 2xx Success.Request已经成功被服务器接受，理解并处理
+     200 OK
+3. 3xx 重定向
+4. 4xx Client Error. 
+     400 Bad Request
+     401 Unauthorized
+     403 Forbidden. 
+     404 Not Found. 请求失败，未发现服务器的资源
+     405 Method Not Allowed
+     408 Request Timeout
+5. 5xx Server Error
+     500 通用错误消息
+     501 Not Implemented
+     502 Bad GateWay
+     503 Service Unavaliable. 服务器维护，暂时无法处理请求，如果能预计多久后有效，可以在响应中设置Retry-After头
+     504 Gateway timeput
