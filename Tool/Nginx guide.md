@@ -16,6 +16,33 @@ Ubuntu安装 `sudo apt-get install nginx`,主要配置路径`/etc/nginx`，存�
 
 命令`sudo ln -s /etc/nginx/sites-available/<vhost> /etc/nginx/sites-enabled/<vhost>`
 
+```
+root@LaiDev:/etc/nginx# tree -a
+.
+├── conf.d
+│?? └── load-balancer.conf
+├── fastcgi.conf
+├── fastcgi_params
+├── koi-utf
+├── koi-win
+├── mime.types
+├── nginx.conf
+├── proxy_params
+├── scgi_params
+├── sites-available
+│?? ├── default
+│?? ├── webproxy
+│?? └── .webproxy.swp
+├── sites-enabled
+│?? ├── default -> /etc/nginx/sites-available/default
+│?? └── webproxy -> /etc/nginx/sites-available/webproxy
+├── snippets
+│?? ├── fastcgi-php.conf
+│?? └── snakeoil.conf
+├── uwsgi_params
+└── win-utf
+```
+
 安装成功启动Nginx后，可以通过浏览器访问http://localhost 看到Nginx的欢迎页面，Niginx默认端口为80，如果80端口已经被占用，需要修改`conf/nginx.conf`文件的80端口为可用端口
 ## 常用命令
  -   启动Nginx, 成功后会开启两个进程，当然何以生成Windows服务实现开机启动`start nginx`
