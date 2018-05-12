@@ -56,7 +56,7 @@ server {
 5) (url_hash)
 按访问URL的Hash结果来分配请求，使每个URL定向到同一个后端服务器，后端服务器为缓存时比较有效
 
-下面为RR策略配置，访问http://localhost:6606能够循环访问Server1和Server2
+下面为RR策略配置，访问http://localhost:6606 能够循环访问Server1和Server2
 ```
 http {
     ...
