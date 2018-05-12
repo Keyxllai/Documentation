@@ -56,6 +56,15 @@ server {
 5) (url_hash)
 按访问URL的Hash结果来分配请求，使每个URL定向到同一个后端服务器，后端服务器为缓存时比较有效
 
+使用Node快速搭建两个API,修改port即可,创建app.js，在对于目录下npm安装express`npm install express`,启动API`node app.js`,需要安装Node|NPM|express
+```
+var express = require('express');
+var app = express();
+app.get('/', function(req, res){
+   res.send("Hello World! App01, Port:6607");
+});
+app.listen(6607, '127.0.0.1');
+```
 下面为RR策略配置，访问http://localhost:6606 能够循环访问Server1和Server2
 ```
 http {
