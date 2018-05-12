@@ -12,8 +12,8 @@ Nginx诞生年代，软件界大家讨论激烈的问题就是**C10K**，早期W
 ## 安装
 Windows OS下载解压在指定目录即可，[下载地址](https://nginx.org/en/download.html)
 
-Ubuntu安装 sudo apt-get install nginx
-安装成功启动Nginx后，可以通过浏览器访问http://localhost 看到Nginx的欢迎页面，Niginx默认端口为80，如果80端口已经被占用，需要修改conf/nginx.conf文件的80端口为可用端口
+Ubuntu安装 `sudo apt-get install nginx`
+安装成功启动Nginx后，可以通过浏览器访问http://localhost 看到Nginx的欢迎页面，Niginx默认端口为80，如果80端口已经被占用，需要修改`conf/nginx.conf`文件的80端口为可用端口
 ## 常用命令
  -   启动Nginx, 成功后会开启两个进程，当然何以生成Windows服务实现开机启动`start nginx`
  - 重新加载配置`nginx -s reload`
