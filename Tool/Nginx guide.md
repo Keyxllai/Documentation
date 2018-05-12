@@ -12,7 +12,8 @@ Nginx诞生年代，软件界大家讨论激烈的问题就是**C10K**，早期W
 ## 安装
 Windows OS下载解压在指定目录即可，[下载地址](https://nginx.org/en/download.html)
 
-Ubuntu安装 `sudo apt-get install nginx`
+Ubuntu安装 `sudo apt-get install nginx`,主要配置路径`/etc/nginx`，存储所有可用虚拟主机配置文件路径`/etc/nginx/sites-available/`，但真正启用的虚拟主机配置在`/etc/nginx/sites-enabled/`,其实就是sites-availabel文件夹中配置的镜像【软链接】。
+命令`sudo ln -s /etc/nginx/sites-available/<vhost> /etc/nginx/sites-enabled/<vhost>`
 安装成功启动Nginx后，可以通过浏览器访问http://localhost 看到Nginx的欢迎页面，Niginx默认端口为80，如果80端口已经被占用，需要修改`conf/nginx.conf`文件的80端口为可用端口
 ## 常用命令
  -   启动Nginx, 成功后会开启两个进程，当然何以生成Windows服务实现开机启动`start nginx`
@@ -82,7 +83,7 @@ http {
     }
 }
 ```
-下面为带权RR，访问http://localhost:6606能够循环访问Server1 两次和Server2一次。
+下面为带权RR，访问http://localhost:6606 能够循环访问Server1 两次和Server2一次。
 ```
 http {
     ...
@@ -99,5 +100,20 @@ http {
         proxy_set_header X-Forwarded-For  $remote_addr;
       }
     }
+}
+```
+**Ubuntu**配置Load balancer, 在`/etc/nginx/conf.d`增加`load-balancer.conf`配置
+```
+upstream testsvr{
+	server localhost:6607 weight=1 max_fails=1 fail_timeout=5s;
+	server localhost:6608 weight=1;
+}
+
+server{
+	listen 6606;
+	location / {
+		proxy_pass http://testsvr;
+		proxy_set_header Host $host;
+	}
 }
 ```
