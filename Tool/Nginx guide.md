@@ -1,28 +1,29 @@
-## ¼ò½é
-Nginx (engine x) ÊÇÒ»¸ö¸ßÐÔÄÜµÄHTTPºÍ·´Ïò´úÀí·þÎñÆ÷£¬Ò²ÊÇÒ»¸öIMAP/POP3/SMTP·þÎñÆ÷¡£
-## µ®Éú±³¾°
-NginxÊÇIgor Sysoev[ÒÁ¸ê¶û¡¤ÈüË÷Ò®·ò] 2002ÄêÎª¶íÂÞË¹·ÃÎÊÁ¿µÚ¶þµÄRambler.ruÕ¾µã¿ª·¢µÄÒ»¸öHTTPÕ¾µã·þÎñÆ÷£¬µÚÒ»¸ö¹«¿ª°æ±¾0.1.0·¢²¼ÓÚ2004Äê10ÔÂ4ÈÕ£¬Ëü±»Éù³ÆÃ¿ÌìÄÜ¹»´¦Àí5ÒÚ¸öÇëÇó£¬ÄÜ¹»ÔËÐÐÔÚ¼¸ºõËùÓÐµÄÖ÷Á÷²Ù×÷ÏµÍ³ÉÏ¡£
-Nginxµ®ÉúÄê´ú£¬Èí¼þ½ç´ó¼ÒÌÖÂÛ¼¤ÁÒµÄÎÊÌâ¾ÍÊÇ**C10K**£¬ÔçÆÚWeb·þÎñÆ÷Èç¹û²¢·¢·ÃÎÊ¹ýÍò·þÎñ¾Í»á×Ô¶¯±ÀÀ£¡£ºóÀ´µÄApacheÍÆ³öV2.4½â¾ö²¢·¢ÎÊÌâ£¬Í¬Ê±Ò²µ®Éú³öÀ´ÆäËû·þÎñÆ÷½â¾ö¸ÃÎÊÌâ£¬Lighttpd,Nginx
-## ÌØµã
- -   Ö§³ÖLinux epoll;¡¾ÇáËÉÖ§³Ö2/3Íò²¢·¢Á¬½Ó£¬epollÄ£Ê½ÓÅÊÆ£¬CPUÕ¼ÓÃÂÊµÍ¡¿
- -   µ×²ãÊµÏÖ´¿C;¡¾¸ßÐÔÄÜ¡¿
- -   ºËÐÄ´úÂëÈ«²¿ÓÃÊÂ¼þ´¥·¢»úÖÆÍê³É
- -   ¿çÆ½Ì¨
- -  ¿ªÔ´ÇÒÉçÇø»îÔ¾¶È¸ß
-## °²×°
-Windows OSÏÂÔØ½âÑ¹ÔÚÖ¸¶¨Ä¿Â¼¼´¿É£¬[ÏÂÔØµØÖ·](https://nginx.org/en/download.html)
-Ubuntu°²×° sudo apt-get install nginx
-°²×°³É¹¦Æô¶¯Nginxºó£¬¿ÉÒÔÍ¨¹ýä¯ÀÀÆ÷·ÃÎÊhttp://localhost¿´µ½NginxµÄ»¶Ó­Ò³Ãæ£¬NiginxÄ¬ÈÏ¶Ë¿ÚÎª80£¬Èç¹û80¶Ë¿ÚÒÑ¾­±»Õ¼ÓÃ£¬ÐèÒªÐÞ¸Äconf/nginx.confÎÄ¼þµÄ80¶Ë¿ÚÎª¿ÉÓÃ¶Ë¿Ú
-## ³£ÓÃÃüÁî
- -   Æô¶¯Nginx, ³É¹¦ºó»á¿ªÆôÁ½¸ö½ø³Ì£¬µ±È»ºÎÒÔÉú³ÉWindows·þÎñÊµÏÖ¿ª»úÆô¶¯`start nginx`
- - ÖØÐÂ¼ÓÔØÅäÖÃ`nginx -s reload`
- - ÑéÖ¤ÅäÖÃÊÇ·ñÓÐÐ§`nginx -t`
- - Í£Ö¹·þÎñ`nginx -s stop` `nginx -s quit`
+## ç®€ä»‹
+Nginx (engine x) æ˜¯ä¸€ä¸ªé«˜æ€§èƒ½çš„HTTPå’Œåå‘ä»£ç†æœåŠ¡å™¨ï¼Œä¹Ÿæ˜¯ä¸€ä¸ªIMAP/POP3/SMTPæœåŠ¡å™¨ã€‚
+## è¯žç”ŸèƒŒæ™¯
+Nginxæ˜¯Igor Sysoev[ä¼Šæˆˆå°”Â·èµ›ç´¢è€¶å¤«] 2002å¹´ä¸ºä¿„ç½—æ–¯è®¿é—®é‡ç¬¬äºŒçš„Rambler.ruç«™ç‚¹å¼€å‘çš„ä¸€ä¸ªHTTPç«™ç‚¹æœåŠ¡å™¨ï¼Œç¬¬ä¸€ä¸ªå…¬å¼€ç‰ˆæœ¬0.1.0å‘å¸ƒäºŽ2004å¹´10æœˆ4æ—¥ï¼Œå®ƒè¢«å£°ç§°æ¯å¤©èƒ½å¤Ÿå¤„ç†5äº¿ä¸ªè¯·æ±‚ï¼Œèƒ½å¤Ÿè¿è¡Œåœ¨å‡ ä¹Žæ‰€æœ‰çš„ä¸»æµæ“ä½œç³»ç»Ÿä¸Šã€‚
+Nginxè¯žç”Ÿå¹´ä»£ï¼Œè½¯ä»¶ç•Œå¤§å®¶è®¨è®ºæ¿€çƒˆçš„é—®é¢˜å°±æ˜¯**C10K**ï¼Œæ—©æœŸWebæœåŠ¡å™¨å¦‚æžœå¹¶å‘è®¿é—®è¿‡ä¸‡æœåŠ¡å°±ä¼šè‡ªåŠ¨å´©æºƒã€‚åŽæ¥çš„ApacheæŽ¨å‡ºV2.4è§£å†³å¹¶å‘é—®é¢˜ï¼ŒåŒæ—¶ä¹Ÿè¯žç”Ÿå‡ºæ¥å…¶ä»–æœåŠ¡å™¨è§£å†³è¯¥é—®é¢˜ï¼ŒLighttpd,Nginx
+## ç‰¹ç‚¹
+ -   æ”¯æŒLinux epoll;ã€è½»æ¾æ”¯æŒ2/3ä¸‡å¹¶å‘è¿žæŽ¥ï¼Œepollæ¨¡å¼ä¼˜åŠ¿ï¼ŒCPUå ç”¨çŽ‡ä½Žã€‘
+ -   åº•å±‚å®žçŽ°çº¯C;ã€é«˜æ€§èƒ½ã€‘
+ -   æ ¸å¿ƒä»£ç å…¨éƒ¨ç”¨äº‹ä»¶è§¦å‘æœºåˆ¶å®Œæˆ
+ -   è·¨å¹³å°
+ -  å¼€æºä¸”ç¤¾åŒºæ´»è·ƒåº¦é«˜
+## å®‰è£…
+Windows OSä¸‹è½½è§£åŽ‹åœ¨æŒ‡å®šç›®å½•å³å¯ï¼Œ[ä¸‹è½½åœ°å€](https://nginx.org/en/download.html)
+
+Ubuntuå®‰è£… sudo apt-get install nginx
+å®‰è£…æˆåŠŸå¯åŠ¨NginxåŽï¼Œå¯ä»¥é€šè¿‡æµè§ˆå™¨è®¿é—®http://localhost çœ‹åˆ°Nginxçš„æ¬¢è¿Žé¡µé¢ï¼ŒNiginxé»˜è®¤ç«¯å£ä¸º80ï¼Œå¦‚æžœ80ç«¯å£å·²ç»è¢«å ç”¨ï¼Œéœ€è¦ä¿®æ”¹conf/nginx.confæ–‡ä»¶çš„80ç«¯å£ä¸ºå¯ç”¨ç«¯å£
+## å¸¸ç”¨å‘½ä»¤
+ -   å¯åŠ¨Nginx, æˆåŠŸåŽä¼šå¼€å¯ä¸¤ä¸ªè¿›ç¨‹ï¼Œå½“ç„¶ä½•ä»¥ç”ŸæˆWindowsæœåŠ¡å®žçŽ°å¼€æœºå¯åŠ¨`start nginx`
+ - é‡æ–°åŠ è½½é…ç½®`nginx -s reload`
+ - éªŒè¯é…ç½®æ˜¯å¦æœ‰æ•ˆ`nginx -t`
+ - åœæ­¢æœåŠ¡`nginx -s stop` `nginx -s quit`
  - Ubuntu check Nginx status`sudo systemctl status nginx`
  - Ubuntu start Nginx Server`sudo systemctl start nginx`
-## ³£ÓÃ¹¦ÄÜ
- - **¾²Ì¬·þÎñÆ÷**
- ÏÂÃæÎª²¿ÊðsampleÕ¾µã
+## å¸¸ç”¨åŠŸèƒ½
+ - **é™æ€æœåŠ¡å™¨**
+ ä¸‹é¢ä¸ºéƒ¨ç½²sampleç«™ç‚¹
 ```
 server {
   listen 7978;
@@ -30,12 +31,12 @@ server {
   root dist;
   index index.html;
   location / {
-	add_header X-Proxy-server $server_addr; //Ôö¼ÓResponse Header
-	error_page 404 = /index.html;           //404µ÷ÕûÄ¬ÈÏÒ³Ãæ
+	add_header X-Proxy-server $server_addr; //å¢žåŠ Response Header
+	error_page 404 = /index.html;           //404è°ƒæ•´é»˜è®¤é¡µé¢
   }
 }
 ```
- - **·´Ïò´úÀí**
+ - **åå‘ä»£ç†**
  ```
  server {
   listen 7778;
@@ -44,22 +45,22 @@ server {
   }
 }
  ```
- - **¸ºÔØ¾ùºâ**
- 1) RR(Round Robin) [Ä¬ÈÏÄ£Ê½]
-Ã¿¸öÇëÇó°´ÕÕÊ±¼äË³ÐòÖðÒ»·ÊÅàµ½²»Í¬µÄºó¶Ë·þÎñÆ÷£¬¿ÉÒÔ½áºÏmax_fails¡¢fail_timeout¡¢weightµÈ×ÛºÏÆÀ¹À
-2) weight(È¨ÖØ)
-Ö¸¶¨ÂÖÑ¯¸ÅÂÊ£¬weightºÍ·ÃÎÊ±ÈÂÊ³ÉÕý±È£¬ÓÃÓÚºó¶Ë·þÎñÆ÷ÐÔÄÜ²»¾ùÇé¿ö
+ - **è´Ÿè½½å‡è¡¡**
+ 1) RR(Round Robin) [é»˜è®¤æ¨¡å¼]
+æ¯ä¸ªè¯·æ±‚æŒ‰ç…§æ—¶é—´é¡ºåºé€ä¸€è‚¥åŸ¹åˆ°ä¸åŒçš„åŽç«¯æœåŠ¡å™¨ï¼Œå¯ä»¥ç»“åˆmax_failsã€fail_timeoutã€weightç­‰ç»¼åˆè¯„ä¼°
+2) weight(æƒé‡)
+æŒ‡å®šè½®è¯¢æ¦‚çŽ‡ï¼Œweightå’Œè®¿é—®æ¯”çŽ‡æˆæ­£æ¯”ï¼Œç”¨äºŽåŽç«¯æœåŠ¡å™¨æ€§èƒ½ä¸å‡æƒ…å†µ
 3) ip_hash
-Ã¿¸öÇëÇó·ÃÎÊIPµÄHash½á¹û·ÖÅä£¬Ê¹µÃÃ¿¸ö¿Í»§¶Ë·ÃÎÊÒ»¸öºó¶Ë·þÎñÆ÷£¬½â¾ö¸ºÔØ¼¯ÈºSessionÍ¬²½ÎÊÌâ[hash¾ßÓÐ½á¹ûÒ»ÖÂÐÔ]¡£
-4) fair(µÚÈý·½)
+æ¯ä¸ªè¯·æ±‚è®¿é—®IPçš„Hashç»“æžœåˆ†é…ï¼Œä½¿å¾—æ¯ä¸ªå®¢æˆ·ç«¯è®¿é—®ä¸€ä¸ªåŽç«¯æœåŠ¡å™¨ï¼Œè§£å†³è´Ÿè½½é›†ç¾¤SessionåŒæ­¥é—®é¢˜[hashå…·æœ‰ç»“æžœä¸€è‡´æ€§]ã€‚
+4) fair(ç¬¬ä¸‰æ–¹)
 5) (url_hash)
-°´·ÃÎÊURLµÄHash½á¹ûÀ´·ÖÅäÇëÇó£¬Ê¹Ã¿¸öURL¶¨Ïòµ½Í¬Ò»¸öºó¶Ë·þÎñÆ÷£¬ºó¶Ë·þÎñÆ÷Îª»º´æÊ±±È½ÏÓÐÐ§
+æŒ‰è®¿é—®URLçš„Hashç»“æžœæ¥åˆ†é…è¯·æ±‚ï¼Œä½¿æ¯ä¸ªURLå®šå‘åˆ°åŒä¸€ä¸ªåŽç«¯æœåŠ¡å™¨ï¼ŒåŽç«¯æœåŠ¡å™¨ä¸ºç¼“å­˜æ—¶æ¯”è¾ƒæœ‰æ•ˆ
 
-ÏÂÃæÎªRR²ßÂÔÅäÖÃ£¬·ÃÎÊhttp://localhost:6606ÄÜ¹»Ñ­»··ÃÎÊServer1ºÍServer2
+ä¸‹é¢ä¸ºRRç­–ç•¥é…ç½®ï¼Œè®¿é—®http://localhost:6606èƒ½å¤Ÿå¾ªçŽ¯è®¿é—®Server1å’ŒServer2
 ```
 http {
     ...
-    #ÓÃupstreamÖ¸Áî¶¨ÒåÒ»×é·´Ïò´úÀí/¸ºÔØ¾ùºâºó¶Ë·þÎñÆ÷³Ø
+    #ç”¨upstreamæŒ‡ä»¤å®šä¹‰ä¸€ç»„åå‘ä»£ç†/è´Ÿè½½å‡è¡¡åŽç«¯æœåŠ¡å™¨æ± 
     upstream test_svr {
       server localhost:6607;
       server localhost:6608;
@@ -67,12 +68,12 @@ http {
     server {
       listen 6606;
       location / {
-        proxy_pass http://test_svr;#ÓÃÓÚÖ¸Ïò·´Ïò´úÀíµÄ·þÎñÆ÷³Ø
+        proxy_pass http://test_svr;#ç”¨äºŽæŒ‡å‘åå‘ä»£ç†çš„æœåŠ¡å™¨æ± 
       }
     }
 }
 ```
-ÏÂÃæÎª´øÈ¨RR£¬·ÃÎÊhttp://localhost:6606ÄÜ¹»Ñ­»··ÃÎÊServer1 Á½´ÎºÍServer2Ò»´Î¡£
+ä¸‹é¢ä¸ºå¸¦æƒRRï¼Œè®¿é—®http://localhost:6606èƒ½å¤Ÿå¾ªçŽ¯è®¿é—®Server1 ä¸¤æ¬¡å’ŒServer2ä¸€æ¬¡ã€‚
 ```
 http {
     ...
@@ -85,7 +86,7 @@ http {
       listen 6606;
       location / {
         proxy_pass http://test_svr;
-        proxy_set_header Host  $host;#·´Ïò´úÀí·¢ËÍHeader
+        proxy_set_header Host  $host;#åå‘ä»£ç†å‘é€Header
         proxy_set_header X-Forwarded-For  $remote_addr;
       }
     }
