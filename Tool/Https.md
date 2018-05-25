@@ -24,8 +24,11 @@
 ### 1.7 数字证书
 > 在解密数字签名时候需要提前知道发送方的公钥，但是如何解决？ 由统一证书管理机构来管理所有需要发送数据方的公钥，对公钥进行认证和加密。这个机构也就是我们常说的CA。***认证加密后的公钥，即是证书，又称为CA证书***。 
 
-
+## 2 总结
+> 加密：公钥加密，私钥解密
+认证：私钥加密，公钥解密
 
 ## 参考
-[数字签名](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
-[SSL加密原理](http://www.netadmin.com.tw/article_content.aspx?sn=1106140008)
+[数字签名](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)<br />
+[SSL加密原理](http://www.netadmin.com.tw/article_content.aspx?sn=1106140008)<br />
+[https原理](https://www.guokr.com/post/114121/)<br />
