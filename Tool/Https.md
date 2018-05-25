@@ -28,3 +28,4 @@
 
 ## 参考
 [数字签名](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)
+[SSL加密原理](http://www.netadmin.com.tw/article_content.aspx?sn=1106140008)
