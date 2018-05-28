@@ -28,8 +28,11 @@
 > ***加密***：公钥加密，私钥解密<br />
 ***认证***：私钥加密，公钥解密
 
-## SSL/TSL[Secure Sockets Layer/Transport Layer Security]
+## 3 SSL/TSL[Secure Sockets Layer/Transport Layer Security]
 > 安全套接层、传输层安全 是为网络通信提供安全及数据完整性的安全协议，SSL协议位于TCP/IP协议之上，为数据通信提供安全支持。**SSL记录协议（SSL Record Protocol）**：它建立在可靠的传输协议（如TCP）之上，为高层协议提供数据封装、压缩、加密等基本功能的支持。 **SSL握手协议（SSL Handshake Protocol）**：它建立在SSL记录协议之上，用于在实际的数据传输开始前，通讯双方进行身份认证、协商加密算法、交换加密密钥等。
+## 4 OpenSSL
+> 开源工具集，主要SSL/TSL协议的实现；常用加密算法的实现；秘钥和证书的管理。
+
 ## 参考
 [数字签名](http://www.ruanyifeng.com/blog/2011/08/what_is_a_digital_signature.html)<br />
 [SSL加密原理](http://www.netadmin.com.tw/article_content.aspx?sn=1106140008)<br />
