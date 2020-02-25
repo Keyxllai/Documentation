@@ -11,6 +11,11 @@ Redis【remote dictionary server】是开源高性能的key-value存储，用于
 - 支持数据备份
 - value大小，redis达到512MB,Memcache为1MB
 - Redis为单线程的IO模型，受CPU性能影响，Memcache多线程。
+## Redis读写快原因
+- 完全基于内存，数据在内存完成请求的计算
+- 单线程，避免不必要上下文切换和竞争，也不存在多进程或者多线程的切换导致消耗CPU, [**CPU多核，可以单机多个Redis实例**]
+- 多路IO复用模型，非阻塞IO
+
 ## 大量Key同时设置到期时间，注意！！！
 ```
 大量Keys同时过期可能在某个时间点redis服务器出现卡顿，大量请求会查询DB，严重可能造成雪崩，注意在设置过期时间加上随机数
