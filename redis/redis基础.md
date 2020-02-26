@@ -29,3 +29,33 @@ Keys过多会消耗redis服务器内存，可以通过**keys指令**一次性返
 
 语法：**SCAN cursor [MATCH pattern][COUNT count]**，例子：**scan 0 match kk* count 100**  
 
+## Redis过期策略
+> **定期删除+惰性删除**  
+
+**定期删除**：Redis默认每隔100s随机抽取设置了过期时间的Keys去检查，如果过期就删除。  
+**惰性删除**：Redis不主动删除过期的Key,当读取某个Key的时候，Redis去检查该Key是否设置过期时间和是否过期，如果过期就删除Key并且不返回任何值，就是所谓的惰性删除。  
+结合上面两种策略redis能够保证过期的Key一定能够删除
+
+## Redis内存淘汰机制
+背景：假设大量的key没有被redis定期删除策略移除，并且这些key没有被读取，这就会导致大量不会被命中的keys存在内存中，导致redis内存耗尽。这种情况就需要走**内存淘汰机制**。  
+**过程：**  
+1. 客户端向redis服务器申请内存指令，如Set
+2. Redis会检查当前的内存使用情况，如果已使用内存大于maxmemory设置的值，redis就会根据设置的内存淘汰策略来释放内存，删除keys
+3. 执行指令
+> Redis3.0包含6中淘汰策略  
+
+1. volatile-lru -> remove the key with an expire set using an LRU algorithm
+2. allkeys-lru -> remove any key according to the LRU algorithm
+3. volatile-random -> remove a random key with an expire set
+4. allkeys-random -> remove a random key, any key
+5. volatile-ttl -> remove the key with the nearest expire time (minor TTL)
+6. noeviction -> don't expire at all, just return an error on write operations  
+默认设置为noeviction
+> LRU(Least Rencently Used)淘汰
+
+LRU算法根据keys的访问历史记录来淘汰.Redis中每个对象都设置了响应的lru,每次访问都会更新对应的lru.  
+Redis中LRU算法是一个近似算法，抽样数默认为5```maxmemory-samples 5```,抽样数越大消耗内存
+```
+# The default of 5 produces good enough results. 10 Approximates very closely
+# true LRU but costs a bit more CPU. 3 is very fast but not very accurate.
+```
