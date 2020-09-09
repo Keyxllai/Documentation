@@ -38,3 +38,5 @@ docker exec -it  f69b2d0a6f22 /bin/sh
 docker exec -it  f69b2d0a6f22 bash
 docker exec -it  f69b2d0a6f22 sh
 ```
+
+![docker CMD](http://innomind-zj.smartbx.top/dk.png)
