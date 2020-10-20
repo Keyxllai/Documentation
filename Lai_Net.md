@@ -4,7 +4,7 @@
     <img src="http://innomind-zj.smartbx.top/keyxllai.jpg" width="150">
 </div>
 
-**基本信息：** 赖小林 / 男 / 30&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**现&ensp;在&ensp;地：** 四川成都
+**基本信息：** Lai / 男 / 30&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**现&ensp;在&ensp;地：** 四川成都
 
 **手&ensp;机&ensp;号：** 181 9088 8724&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**邮&emsp;&emsp;箱：** keyxllai@gmail.com
 
@@ -24,18 +24,18 @@
 
 <h1>个人作品</h1>
 
-**名称：** [.Net微服务框架](https://gitee.com/Shaun_Lai/SDChinaMobile)&emsp;&emsp;
+**名称：** [.Net微服务框架](https://gitee.com/Shaun_Lai/SDChinaMobile) [https://gitee.com/Shaun_Lai/SDChinaMobile]&emsp;&emsp;
 <br/>
 **简介：** 基于.Net快速搭建Rest API，专注业务代码处理即可，结合Nginx可快速支持高并发，已在数据中心采集传感器数据验证。
 
-**名称：** [Addin API](https://github.com/Keyxllai/WorkStation)
+**名称：** [Addin API](https://github.com/Keyxllai/WorkStation) [https://github.com/Keyxllai/WorkStation]
 <br/>
 **简介：** 基于Nodejs+Express框架，通过简单的配置即可完成插件式启用不同的Rest API，理念来自VSCode插件系统。
 
 
 <h1>工作经历</h1>
 
-**公司：** 墨心&emsp;&emsp;**职位：** （合伙创业）&emsp;&emsp;**时间：** 2018.10-至今
+**公司：** 四川&emsp;&emsp;**职位：** （合伙创业）&emsp;&emsp;**时间：** 2018.10-至今
 <br/>
 **产品名称：** 智慧数字化平台
 <br/>
