@@ -120,7 +120,8 @@ thread.Start();
 > b. 库存预热， 秒杀本质是对库存的抢夺，可将秒杀前通过任务将商品库存加载到Redis中，让整个服务流程再redis中完成，秒杀结束后再异步修改库存即可  
 > c. 超卖问题redis本身支持事务，可以利用LUA脚本完成库存扣减  
 
-http://innomind-zj.smartbx.top/%E7%A7%92%E6%9D%80%E6%9E%B6%E6%9E%84.png 
+[架构设计图] https://www.processon.com/view/link/5f9551d37d9c0806f28d7c23
+
 ![秒杀结构](http://innomind-zj.smartbx.top/%E7%A7%92%E6%9D%80%E6%9E%B6%E6%9E%84.png)
 ## 9、什么前后端分离，为什么要采取前后端分离？
 前后端分离是属于一种开发模式,开发过程中需要约定交互接口,实现并行开发,前端专注渲染和交互,后端专注业务开发,开发结束后需要集成测试,独立部署.
