@@ -6,7 +6,8 @@
 pi@raspberrypi:~ $ uname -a
 Linux raspberrypi 5.4.79-v7+ #1373 SMP Mon Nov 23 13:22:33 GMT 2020 armv7l GNU/Linux
 ```
-上面系统显示32位，ARM V7架构，基于这些信息去官网(https://nodejs.org/en/download/)下载相应的安装包
+上面系统显示32位，ARM V7架构，基于这些信息去官网(https://nodejs.org/en/download/)下载相应的安装包  
+
 2 下载nodejs预编译安装包
 ```
 wget https://nodejs.org/dist/v14.15.4/node-v14.15.4-linux-armv7l.tar.xz
