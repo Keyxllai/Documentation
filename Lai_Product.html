@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lai_Product.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<hr>
+<div style="float:right">
+    <img src="http://innomind-zj.smartbx.top/keyxllai.jpg" width="150">
+</div>
+<p><strong>基本信息：</strong> 赖小林 / 男 / 31     <strong>现 在 地：</strong> 四川成都</p>
+<p><strong>手 机 号：</strong> 156 8321 6069     <strong>邮  箱：</strong> keyxllai@gmail.com</p>
+<p><strong>毕业院校：</strong> 西安建筑科技大学    <strong>专  业：</strong> 电子信息科学与技术</p>
+<p><strong>学 历 号：</strong> 本科          <strong>求职意向：</strong> <strong>PM</strong></p>
+<h1>技能专长</h1>
+<ul>
+<li>专注工业数字化项目管理与产品设计，擅长分析业务流程、用户需求及转化为具体产品形式</li>
+<li>具有丰富的制造业数字化转型、智慧园区、BIM建筑健康监测等项目管理经验，对项目管理中资源规划，进度跟踪，实施计划等全流程负责。</li>
+<li>具有多年名企工业软件和互联网产品开发经验，熟悉敏捷开发流程，善于沟通，逻辑清晰；善于统筹管理和跨部门协作，主动推动各方解决问题。</li>
+<li>6年外企工作经验，具有较好的英文读说能力，较轻松阅读英文文档及技术资料</li>
+</ul>
+<h1>工作经历</h1>
+<p><strong>公司：</strong> 四川墨心科语  <strong>职位：</strong> 项目经理  <strong>时间：</strong> 2018.10-至今
+<strong>行业类别：</strong> 工业互联网
+<strong>主要职责：</strong></p>
+<ul>
+<li>作为公司承接项目负责人，与资方梳理业务流程，整理项目需求，拆解项目功能并制定项目开发计划并跟踪进度。确保项目保质按时完成，协调各部门的工作，从项目立项、产品设计、开发测试到上线的整个项目流程管理和跟进。确保项目按时完成，协调团队内部的工作，推动项目实施，按时上线；</li>
+<li>对项目不断完善优化,通过项目优化提炼产品功能。制定项目开发计划并跟踪进度，确保项目保证质量按时完成、协调各个阶段的工作，包括产品、研发、设计、测试、运营等，推动产品实施</li>
+<li>公司技术研发团队管理和团队建设；</li>
+<li>负责项目前期与资方的方案讲解及POC方案演示,与资方现有系统的对接设计，包括离散制造造纸毛毯行业，化工油墨行业，IDC数据中心行业，建筑健康监测领域，并成功上线运营。
+<br/></li>
+</ul>
+<p><strong>负责项目：</strong></p>
+<ul>
+<li><strong>四川环龙织物数字化项目</strong></li>
+</ul>
+<ol>
+<li><strong>项目职责</strong>：作为墨心项目经理，负责项目从业务对接，POC阶段方案验证，原型设计，项目研发测试，后续分阶段上线运营等所有环节。</li>
+<li><strong>项目描述</strong>：主要包含环龙织物车间制造执行系统和纸机效率分析，根据前线售后服务反馈数据，分析出客户最佳运行毛毯指标，并打通毛毯生产数据和工艺设计信息，反向优化毛毯生产所使用的工艺配方。</li>
+<li><strong>项目成绩</strong>：环龙织物通过共享纸机系统给客户使用后，反馈一半客户确定增加环龙品牌造纸毛毯需求量；墨心成功打造制造业数字化转型的标杆企业案例，持续扩大中小型企业数字化转型业务拓展。</li>
+</ol>
+<ul>
+<li><strong>成都托展新材料数字化系统</strong></li>
+</ul>
+<ol>
+<li><strong>项目职责</strong>：作为墨心数字化解决方案顾问，负责项目实施方案。</li>
+<li><strong>项目描述</strong>：中国“专精特新”小巨人新建厂房数字化建设项目，分析客户已有分散系统。</li>
+<li><strong>项目成绩</strong>：环龙织物通过共享纸机系统给客户使用后，反馈一半客户确定增加环龙品牌造纸毛毯需求量；墨心成功打造制造业数字化转型的标杆企业案例，持续扩大中小型企业数字化转型业务拓展。</li>
+</ol>
+<ul>
+<li><strong>深中通道BIM监控系统</strong></li>
+<li><strong>中国移动济南IDC运维平台(三维)</strong></li>
+<li><strong>苏州瀚川智慧楼宇系统(三维)</strong></li>
+<li><strong>中建科工装配式建筑进度监控(基于BIM)</strong></li>
+</ul>
+<p><strong>公司：</strong> 新蛋科技(成都)有限公司  <strong>部门|职位：EDI | .Net高级工程师</strong>   <strong>时间：</strong> 2015.11-2018.10</p>
+<ul>
+<li><strong>项目名称：</strong> Newegg VF
+<strong>项目简介：</strong> VF系统负责美国Newegg站点所有销售第三方Vendor商品后的业务，其商品特点为实际库存在供应商仓库，客户在Newegg站点下单后统一由VF系统从Newegg仓库抓取订单信息，生成EDI 850订单数据告知Vendor发货，VF系统处理vendor发送的包裹信息(EDI 856)、库存信息(EDI 846)入库，最终生成客户的发票信息(EDI 810)，直到订单达到最终关闭状态。
+<strong>主要职责：</strong></li>
+<li>作为项目负责人对接美国产品经理，梳理项目需求、技术方案设计、拆解项目开发任务、风险评估、制定项目开发计划；</li>
+<li>主导敏捷迭代中需求开发及服务维护，问题沟通及协调；</li>
+<li>推动使用python全新技术栈重构商品库存信息(EDI 846)入库流程, 支持docker部署，并稳定度过黑五活动，QPS为10W左右。</li>
+</ul>
+ <br/>
+<p><strong>项目名称：</strong> Newegg EaaS
+<br/>
+<strong>项目简介：</strong> EaaS(EDI as an Service)为Newegg用于处理EDI数据的PaaS平台，主要用于集成供应商的EDI信息(证书和X12)。
+<br/>
+<strong>主要工作：</strong></p>
+<ul>
+<li>主要功能需求开发及服务维护；</li>
+<li>推动项目引入Redis(主从)优化业务，并推广至公司某团队升级。</li>
+<li>使用消息、Solr主导升级项目统计报表模块,  并荣获公司季度优秀项目奖。</li>
+</ul>
+<br/>
+<p><strong>公司：</strong> ASMPT  <strong>职位：</strong> .Net工程师  <strong>时间：</strong> 2012.07-2015.10
+<br/>
+<strong>项目名称：</strong> SPM
+<strong>项目简介：</strong> SPM(SIPLACE Performance Monitoring)用来实时记录工厂SIPLACE贴片机生产线的生产状态和性能参数，并将监控的数据通过图表显示在浏览器上。这些监控数据包括生产线状态，生产进度，机器利用率，贴片率，抛料率，消耗元器件等等。为了能够预测生产线性能的趋势，可以根据不同生产线的状况设置目标值。用户可以比较生产线的真实数据和设置的目标值了解生产线的性能。
+<strong>主要工作：</strong></p>
+<ul>
+<li>敏捷迭代中跟新加坡项目经理梳理需求文档，功能需求研发工作；</li>
+<li>多次因项目需求至新加坡研发中心工作</li>
+</ul>
+<h1>自我评价</h1>
+<p>  具有电商、工业互联网等领域业务系统技术研发经验。目前角色作为公司核心人物，完成从纯技术研发人员到了解复合型技能的转变，在中小型制造业企业数字化转型、智慧园区、智慧楼宇等领域有落地解决方案经验。</p>
+
+</body>
+</html>
